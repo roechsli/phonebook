@@ -10,8 +10,10 @@ public class SearchContactInfo {
 		// initialize map
 		int marius = 1000;
 		Map<String, Person> myMap = initMap();
+		
 		// define and add some random characters
 		// felix
+		myMap.put("roman", new Person("roman", "ederstr.12", "0190123456"));
 
 		// search for specific character in map
 		// marius
@@ -33,6 +35,7 @@ public class SearchContactInfo {
 		// 4. printout Name: and wait for input
 	}
 
+	
 	private static void searchByNumber(Map phonebook, String numAsStr) {
 		System.out.println("Person not found");
 

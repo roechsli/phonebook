@@ -4,6 +4,7 @@ public class Person {
 	String name;
 	String adress;
 	String phoneNumber;
+	
 	public Person(String name, String adress, String phoneNumber) {
 		super();
 		this.name = name;
