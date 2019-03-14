@@ -8,12 +8,17 @@ public class SearchContactInfo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// initialize map
-		int marius = 1000;
+		
 		Map<String, Person> myMap = initMap();
 		
 		// define and add some random characters
 		// felix
+<<<<<<< HEAD
 		myMap.put("roman", new Person("roman", "ederstr.12", "0190123456"));
+=======
+		Person dubbl = new Person("Donald Duck", "Entenhausen", "0815");
+		myMap.put(dubbl.name, dubbl);
+>>>>>>> branch 'master' of https://github.com/roechsli/phonebook.git
 
 		// search for specific character in map
 		// marius
@@ -21,6 +26,8 @@ public class SearchContactInfo {
 		// search for specific phone number in map
 		// roman
 		String numAsStr = "+417575757575";
+		searchByNumber(myMap, numAsStr);
+		numAsStr = "0815";
 		searchByNumber(myMap, numAsStr);
 		
 		
@@ -37,13 +44,25 @@ public class SearchContactInfo {
 
 	
 	private static void searchByNumber(Map phonebook, String numAsStr) {
-		System.out.println("Person not found");
-
+		System.out.println("Searching for number:" + numAsStr);
+		for (Object obj : phonebook.values()) {
+			Person pers = (Person) obj;
+			System.out.println(obj);
+			System.out.println(pers.name);
+			if (pers.phoneNumber.equals(numAsStr)) {
+				// found the person
+				System.out.println("The number belongs to: "+pers.name);
+				return;
+			}
+		}
+		System.out.println("Couldn't find a person with this number");
 	}
 
-	private void searchbyName(Map p1, String name) {
-	System.out.println("Person not found");
-	}
+	private void searchByName(Map p1, String str1) {
+		for(int i = 0; i < p1.size();i++) {
+			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
+		} System.out.println(str1 + " wurde nicht gefunden");
+		}
 
 	private static Map<String, Person> initMap() {
 		// First String is name
