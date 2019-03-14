@@ -45,11 +45,9 @@ public class SearchContactInfo {
 			}
 		}
 		System.out.println("Couldn't find a person with this number");
-		// didn't find the person
-
 	}
 
-	private void searchbyName(Map p1, String name) {
+	private void searchByName(Map p1, String name) {
 		System.out.println("Person not found");
 	
 	}
