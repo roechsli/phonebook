@@ -56,9 +56,11 @@ public class SearchContactInfo {
 	}
 
 	private static void searchByName(Map p1, String str1) {
-		for(int i = 0; i < p1.size();i++) {
-			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
-		} System.out.println(str1 + " wurde nicht gefunden");
+		Person person1 = (Person) p1.get(str1);
+		System.out.println("Found person " + person1.getName());
+//		for(int i = 0; i < p1.size();i++) {
+//			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
+//		} System.out.println(str1 + " wurde nicht gefunden");
 		}
 
 	private static Map<String, Person> initMap() {
