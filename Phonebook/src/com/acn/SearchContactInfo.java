@@ -55,18 +55,15 @@ public class SearchContactInfo {
 		System.out.println("Couldn't find a person with this number");
 	}
 
-	private static void searchByName(Map p1, String str1) {
-		
-		Person person1 = (Person) p1.get(str1);
+	private static void searchByName(Map map1, String str1) {
+		Person person1 = (Person) map1.get(str1);
 		if(person1 != null) {
-			System.out.println("Found person " + person1.getName());
+			System.out.println("Found person " + person1.getName() + "with number:");
+			System.out.println(person1.phoneNumber);
 		} else {
 			System.out.println("No person found with name " + str1);
 		}
-//		for(int i = 0; i < p1.size();i++) {
-//			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
-//		} System.out.println(str1 + " wurde nicht gefunden");
-		}
+	}
 
 	private static Map<String, Person> initMap() {
 		// First String is name
