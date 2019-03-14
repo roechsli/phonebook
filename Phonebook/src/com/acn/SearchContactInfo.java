@@ -14,7 +14,7 @@ public class SearchContactInfo {
 		// felix
 		Person dubbl = new Person("Donald Duck", "Entenhausen", "0815");
 		myMap.put(dubbl.name, dubbl);
-
+		dubbl.sear
 		// search for specific character in map
 		// marius
 
@@ -24,7 +24,7 @@ public class SearchContactInfo {
 		searchByNumber(myMap, numAsStr);
 		numAsStr = "0815";
 		searchByNumber(myMap, numAsStr);
-		
+		searchByName(myMap, "Donald Duck");
 		
 		
 		// start app in console with Name: and wait for user input
@@ -52,7 +52,7 @@ public class SearchContactInfo {
 		System.out.println("Couldn't find a person with this number");
 	}
 
-	private void searchByName(Map p1, String str1) {
+	private static void searchByName(Map p1, String str1) {
 		for(int i = 0; i < p1.size();i++) {
 			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
 		} System.out.println(str1 + " wurde nicht gefunden");
