@@ -19,8 +19,17 @@ public class SearchContactInfo {
 		// search for specific phone number in map
 		// roman
 		String numAsStr = "+417575757575";
+<<<<<<< HEAD
 		searchByNumber(numAsStr);
 
+=======
+		searchByNumber(myMap, numAsStr);
+		
+		
+		
+		
+		
+>>>>>>> branch 'master' of https://github.com/roechsli/phonebook
 		// start app in console with Name: and wait for user input
 		// after input set with enter:
 		// 1. if contact does not exist: print contact does not exist
