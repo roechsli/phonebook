@@ -10,11 +10,20 @@ public class SearchContactInfo {
 		// initialize map
 		
 		Map<String, Person> myMap = initMap();
+		
 		// define and add some random characters
 		// felix
+<<<<<<< HEAD
+		myMap.put("roman", new Person("roman", "ederstr.12", "0190123456"));
+=======
 		Person dubbl = new Person("Donald Duck", "Entenhausen", "0815");
 		myMap.put(dubbl.name, dubbl);
+<<<<<<< HEAD
 		
+=======
+>>>>>>> branch 'master' of https://github.com/roechsli/phonebook.git
+
+>>>>>>> branch 'master' of https://github.com/roechsli/phonebook
 		// search for specific character in map
 		// marius
 
@@ -37,6 +46,7 @@ public class SearchContactInfo {
 		// 4. printout Name: and wait for input
 	}
 
+	
 	private static void searchByNumber(Map phonebook, String numAsStr) {
 		System.out.println("Searching for number:" + numAsStr);
 		for (Object obj : phonebook.values()) {
