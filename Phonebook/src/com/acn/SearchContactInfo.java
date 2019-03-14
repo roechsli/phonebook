@@ -8,7 +8,7 @@ public class SearchContactInfo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// initialize map
-		int marius = 1000;
+		
 		Map<String, Person> myMap = initMap();
 		// define and add some random characters
 		// felix
@@ -35,11 +35,23 @@ public class SearchContactInfo {
 
 	private static void searchByNumber(Map phonebook, String numAsStr) {
 		System.out.println("Person not found");
+		for (Object obj : phonebook.values()) {
+			Person pers = (Person) obj;
+			System.out.println(obj);
+			System.out.println(pers);
+			if (pers.name.equals(numAsStr)) {
+				// found the person
+				System.out.println("The number belongs to: "+pers.name);
+			}
+		}
+		System.out.println("Couldn't find a person with this number");
+		// didn't find the person
 
 	}
 
 	private void searchbyName(Map p1, String name) {
-	System.out.println("Person not found");
+		System.out.println("Person not found");
+	
 	}
 
 	private static Map<String, Person> initMap() {
