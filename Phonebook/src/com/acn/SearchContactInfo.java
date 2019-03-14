@@ -20,7 +20,7 @@ public class SearchContactInfo {
 		// search for specific phone number in map
 		// roman
 		String numAsStr = "+417575757575";
-		searchByNumber(numAsStr);
+		searchByNumber(myMap, numAsStr);
 		
 		
 		
