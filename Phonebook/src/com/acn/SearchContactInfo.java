@@ -44,8 +44,6 @@ public class SearchContactInfo {
 		System.out.println("Searching for number:" + numAsStr);
 		for (Object obj : phonebook.values()) {
 			Person pers = (Person) obj;
-//			System.out.println(obj);
-//			System.out.println(pers.name);
 			if (pers.phoneNumber.equals(numAsStr)) {
 				// found the person
 				System.out.println("The number belongs to: "+pers.name);
@@ -58,8 +56,8 @@ public class SearchContactInfo {
 	private static void searchByName(Map map1, String str1) {
 		Person person1 = (Person) map1.get(str1);
 		if(person1 != null) {
-			System.out.println("Found person " + person1.getName() + "with number:");
-			System.out.println(person1.phoneNumber);
+			System.out.print("Found person " + person1.getName() + "with number:");
+			System.out.println("\t" +person1.phoneNumber);
 		} else {
 			System.out.println("No person found with name " + str1);
 		}
