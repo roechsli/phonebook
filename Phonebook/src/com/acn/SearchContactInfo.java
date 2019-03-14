@@ -14,7 +14,7 @@ public class SearchContactInfo {
 		// felix
 		Person dubbl = new Person("Donald Duck", "Entenhausen", "0815");
 		myMap.put(dubbl.name, dubbl);
-		dubbl.sear
+		
 		// search for specific character in map
 		// marius
 
