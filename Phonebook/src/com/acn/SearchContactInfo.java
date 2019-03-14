@@ -56,10 +56,11 @@ public class SearchContactInfo {
 		System.out.println("Couldn't find a person with this number");
 	}
 
-	private void searchByName(Map p1, String name) {
-		System.out.println("Person not found");
-	
-	}
+	private void searchByName(Map p1, String str1) {
+		for(int i = 0; i < p1.size();i++) {
+			if(p1.containsValue(str1)) { System.out.println("Person gefunden:" + str1);}
+		} System.out.println(str1 + " wurde nicht gefunden");
+		}
 
 	private static Map<String, Person> initMap() {
 		// First String is name
