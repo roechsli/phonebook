@@ -12,6 +12,8 @@ public class SearchContactInfo {
 		Map<String, Person> myMap = initMap();
 		// define and add some random characters
 		// felix
+		Person dubbl = new Person("Donald Duck", "Entenhausen", "0815");
+		myMap.put(dubbl.name, dubbl);
 
 		// search for specific character in map
 		// marius
@@ -19,6 +21,8 @@ public class SearchContactInfo {
 		// search for specific phone number in map
 		// roman
 		String numAsStr = "+417575757575";
+		searchByNumber(myMap, numAsStr);
+		numAsStr = "0815";
 		searchByNumber(myMap, numAsStr);
 		
 		
@@ -34,14 +38,15 @@ public class SearchContactInfo {
 	}
 
 	private static void searchByNumber(Map phonebook, String numAsStr) {
-		System.out.println("Person not found");
+		System.out.println("Searching for number:" + numAsStr);
 		for (Object obj : phonebook.values()) {
 			Person pers = (Person) obj;
 			System.out.println(obj);
-			System.out.println(pers);
-			if (pers.name.equals(numAsStr)) {
+			System.out.println(pers.name);
+			if (pers.phoneNumber.equals(numAsStr)) {
 				// found the person
 				System.out.println("The number belongs to: "+pers.name);
+				return;
 			}
 		}
 		System.out.println("Couldn't find a person with this number");
